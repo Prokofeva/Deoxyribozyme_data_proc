@@ -55,28 +55,28 @@ ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 ax.grid(color='gray', linestyle='dotted', linewidth=1, alpha=0.5)
 
-ax.plot(x, mean_y, 'o', markersize=8, color="black", label='short + Dz')
+ax.plot(x, mean_y, 'o', markersize=8, color="black", label='short + BiDZ1')
 ax.plot(x_lls, y_lls, '-', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
 ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 1h
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo1)
-ax.plot(x, mean_y, 's', markersize=8, color="black", label='long + Dz')
+ax.plot(x, mean_y, 's', markersize=8, color="black", label='long + BiDZ1')
 ax.plot(x_lls, y_lls, '--', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
 ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # short 1h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(sh1r)
-ax.plot(x, mean_y, '^', markersize=8, color="black", label='short + Dz + robot')
+ax.plot(x, mean_y, '^', markersize=8, color="black", label='short + DMM1')
 ax.plot(x_lls, y_lls, '-.', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2)#, ms=6)
 ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 1h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo1r)
-ax.plot(x, mean_y, 'v', markersize=8, color="black", label='long + Dz + robot')
+ax.plot(x, mean_y, 'v', markersize=8, color="black", label='long + DMM1')
 ax.plot(x_lls, y_lls, ls='dotted', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2, label='LoD point')#, ms=6)
 ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
@@ -103,28 +103,28 @@ ax2.spines['right'].set_visible(False)
 ax2.spines['top'].set_visible(False)
 ax2.grid(color='gray', linestyle='dotted', linewidth=1, alpha=0.5)
 
-ax2.plot(x, mean_y, 'o', markersize=8, color="black", label='short + Dz')
+ax2.plot(x, mean_y, 'o', markersize=8, color="black", label='short + BiDZ1')
 ax2.plot(x_lls, y_lls, '-', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
 ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 3h
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo3)
-ax2.plot(x, mean_y, 's', markersize=8, color="black", label='long + Dz')
+ax2.plot(x, mean_y, 's', markersize=8, color="black", label='long + BiDZ1')
 ax2.plot(x_lls, y_lls, '--', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
 ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # short 3h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(sh3r)
-ax2.plot(x, mean_y, '^', markersize=8, color="black", label='short + Dz + robot')
+ax2.plot(x, mean_y, '^', markersize=8, color="black", label='short + DMM1')
 ax2.plot(x_lls, y_lls, '-.', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2)#, ms=6)
 ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 3h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo3r)
-ax2.plot(x, mean_y, 'v', markersize=8, color="black", label='long + Dz + robot')
+ax2.plot(x, mean_y, 'v', markersize=8, color="black", label='long + DMM1')
 ax2.plot(x_lls, y_lls, ls='dotted', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2, label='LoD point')#, ms=6)
 ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
