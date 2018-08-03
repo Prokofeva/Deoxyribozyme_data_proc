@@ -55,33 +55,37 @@ ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 ax.grid(color='gray', linestyle='dotted', linewidth=1, alpha=0.5)
 
-ax.plot(x, mean_y, 'o', markersize=8, color="black", label='short')
+ax.plot(x, mean_y, 'o', markersize=8, color="black", label='short + Dz')
 ax.plot(x_lls, y_lls, '-', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
-ax.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 1h
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo1)
-ax.plot(x, mean_y, 's', markersize=8, color="black", label='long')
+ax.plot(x, mean_y, 's', markersize=8, color="black", label='long + Dz')
 ax.plot(x_lls, y_lls, '--', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
-ax.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # short 1h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(sh1r)
-ax.plot(x, mean_y, '^', markersize=8, color="black", label='short + robot')
+ax.plot(x, mean_y, '^', markersize=8, color="black", label='short + Dz + robot')
 ax.plot(x_lls, y_lls, '-.', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2)#, ms=6)
-ax.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
 # long 1h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo1r)
-ax.plot(x, mean_y, 'v', markersize=8, color="black", label='long + robot')
+ax.plot(x, mean_y, 'v', markersize=8, color="black", label='long + Dz + robot')
 ax.plot(x_lls, y_lls, ls='dotted', color="black", linewidth=1.5)
 ax.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2, label='LoD point')#, ms=6)
-ax.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
-ax.legend(loc='upper right', bbox_to_anchor=(0.17, 0.94), numpoints=1)
+ax.legend(loc='upper right', bbox_to_anchor=(0.20, 0.94), numpoints=1)
+ax.text(74, 22.5, r'd)', fontsize=15)
+ax.text(74, 19.5, r'b)', fontsize=15)
+ax.text(74, 16.7, r'a)', fontsize=15)
+ax.text(74, 15.3, r'c)', fontsize=15)
 
 
 ########################################################################
@@ -99,32 +103,38 @@ ax2.spines['right'].set_visible(False)
 ax2.spines['top'].set_visible(False)
 ax2.grid(color='gray', linestyle='dotted', linewidth=1, alpha=0.5)
 
-ax2.plot(x, mean_y, 'o', markersize=8, color="black", label='short')
+ax2.plot(x, mean_y, 'o', markersize=8, color="black", label='short + Dz')
 ax2.plot(x_lls, y_lls, '-', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
-ax2.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
-# long 1h
+# long 3h
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo3)
-ax2.plot(x, mean_y, 's', markersize=8, color="black", label='long')
+ax2.plot(x, mean_y, 's', markersize=8, color="black", label='long + Dz')
 ax2.plot(x_lls, y_lls, '--', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*',markersize=13, color="black", mew=2)#, ms=6)
-ax2.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
-# short 1h + robot
+# short 3h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(sh3r)
-ax2.plot(x, mean_y, '^', markersize=8, color="black", label='short + robot')
+ax2.plot(x, mean_y, '^', markersize=8, color="black", label='short + Dz + robot')
 ax2.plot(x_lls, y_lls, '-.', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2)#, ms=6)
-ax2.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
-# long 1h + robot
+# long 3h + robot
 x, mean_y, std_y, x_lls, y_lls, x_lod, y_lod = data_prep(lo3r)
-ax2.plot(x, mean_y, 'v', markersize=8, color="black", label='long + robot')
+ax2.plot(x, mean_y, 'v', markersize=8, color="black", label='long + Dz + robot')
 ax2.plot(x_lls, y_lls, ls='dotted', color="black", linewidth=1.5)
 ax2.plot(x_lod[0], y_lod[0], '*', markersize=11, color="black", mew=2, label='LoD point')#, ms=6)
-ax2.errorbar(x, mean_y, std_y, fmt=None, ecolor="black", elinewidth=1.5, capthick=1.5)
+ax2.errorbar(x, mean_y, std_y, color="black", fmt='o', ecolor="black", elinewidth=1.5, capthick=1.5)
 
-ax2.legend(loc='upper right', bbox_to_anchor=(0.17, 0.94), numpoints=1)
+ax2.legend(loc='upper right', bbox_to_anchor=(0.20, 0.94), numpoints=1)
+
+ax2.text(74, 42.5, r'd)', fontsize=15)
+ax2.text(74, 32, r'b)', fontsize=15)
+ax2.text(74, 23.5, r'a)', fontsize=15)
+ax2.text(74, 19, r'c)', fontsize=15)
+# r'an equation: $E=mc^2$')
 
 plt.show()
